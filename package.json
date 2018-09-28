@@ -1,6 +1,6 @@
 {
   "name": "react-rkform-allinone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a component to build a complete form, with validations and different types of inputs, using objects in JSON format.",
   "author": "rikardocorp",
   "license": "MIT",
@@ -65,6 +65,5 @@
     "dist"
   ],
   "dependencies": {
-
   }
 }

@@ -285,6 +285,8 @@ var RkInput = function (_Component) {
 
       return isValid;
     }, _this.handlerChangeValue = function (newValue) {
+      console.log('handlerChangeValue');
+      console.log(newValue);
       var name = _this.props.inputProps.name;
       var value = newValue;
 
@@ -299,7 +301,8 @@ var RkInput = function (_Component) {
         showMessage: true
       });
       if (_this.props.changed) {
-        _this.props.changed(name, value);
+        var outValue = _this.props.type === 'number' ? Number(value) : value;
+        _this.props.changed(name, outValue);
       }
     }, _this.handlerChangeProps = function () {
       var newProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
@@ -2359,7 +2362,7 @@ var RkFormInput = function (_Component) {
           );
           break;
         default:
-          opt = React__default.createElement(RkInput, { inputProps: _extends({}, input, { type: type }), rules: rules, changed: this.changed, getFunctions: this.props.inputFunctions, tooltip: this.props.tooltip });
+          opt = React__default.createElement(RkInput, { type: type, inputProps: _extends({}, input, { type: type }), rules: rules, changed: this.changed, getFunctions: this.props.inputFunctions, tooltip: this.props.tooltip });
       }
 
       return opt;

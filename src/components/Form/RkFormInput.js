@@ -54,7 +54,7 @@ class RkFormInput extends Component {
         opt = <Input inputProps={input} plaintext>{ input.value }</Input>
         break
       default:
-        opt = <RkInput inputProps={{...input, type}} rules={rules} changed={this.changed} getFunctions={this.props.inputFunctions} tooltip={this.props.tooltip} />
+        opt = <RkInput type={type} inputProps={{...input, type}} rules={rules} changed={this.changed} getFunctions={this.props.inputFunctions} tooltip={this.props.tooltip} />
     }
 
     return opt
