@@ -12,8 +12,8 @@ class RkForm extends Component {
     ]),
     inputFormHandler: PropTypes.func,
     inputChanged: PropTypes.func,
-    render: PropTypes.bool,
-    isLoading: PropTypes.bool
+    render: PropTypes.bool
+    // isLoading: PropTypes.bool
   }
 
   state = {
@@ -148,7 +148,7 @@ class RkForm extends Component {
         }
         fInput = FormInputs[key]
       }
-      return <RkFormInput key={key} disabled={this.props.isLoading} tooltip={this.state.tooltip} fields={fInput} render={render} changed={this.inputChanged} inputFunctions={this.inputFunctions} />
+      return <RkFormInput key={key} tooltip={this.state.tooltip} fields={fInput} render={render} changed={this.inputChanged} inputFunctions={this.inputFunctions} />
     })
 
     return (
@@ -161,7 +161,7 @@ class RkForm extends Component {
 }
 
 RkForm.defaultProps = {
-  isLoading: false,
+  // isLoading: false,
   render: false
 }
 

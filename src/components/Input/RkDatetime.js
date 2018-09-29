@@ -64,9 +64,9 @@ class RkDatetime extends Component {
       this.setState({touched: false, valid: undefined})
     } else {
       const value = this.state.value
-      console.log(value)
+      // console.log(value)
       const {isValid, msgError} = checkValidity(value, this.state.rules)
-      console.log(isValid, msgError)
+      // console.log(isValid, msgError)
       this.setState({
         touched: true,
         valid: isValid,
@@ -166,7 +166,7 @@ class RkDatetime extends Component {
           }
         }
       }
-      console.log(_value, _outValue)
+      // console.log(_value, _outValue)
       return [_value, _outValue]
     }
     return [null, null]

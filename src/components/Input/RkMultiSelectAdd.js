@@ -72,13 +72,13 @@ class RkMultiSelectAdd extends Component {
   }
 
   handlerTouched = () => {
-    console.log('resetTouched TAGS INPUT')
+    // console.log('resetTouched TAGS INPUT')
     if (this.state.touched) {
       this.setState({touched: false, valid: undefined})
     } else {
       const value = this.state.value
       const {isValid, msgError} = checkValidity(value, this.state.rules)
-      console.log(value, isValid, msgError)
+      // console.log(value, isValid, msgError)
       this.setState({
         value: value,
         touched: true,

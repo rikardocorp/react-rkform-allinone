@@ -285,8 +285,8 @@ var RkInput = function (_Component) {
 
       return isValid;
     }, _this.handlerChangeValue = function (newValue) {
-      console.log('handlerChangeValue');
-      console.log(newValue);
+      // console.log('handlerChangeValue')
+      // console.log(newValue)
       var name = _this.props.inputProps.name;
       var value = newValue;
 
@@ -474,7 +474,7 @@ var RkMultiSelect = function (_Component) {
       updateProps: false,
       _localProps: {}
     }, _this.handlerTouched = function () {
-      console.log('resetTouched SELECT');
+      // console.log('resetTouched SELECT')
       if (_this.state.touched) {
         _this.setState({ touched: false, valid: undefined });
       } else {
@@ -483,8 +483,9 @@ var RkMultiSelect = function (_Component) {
         var _checkValidity = checkValidity(value, _this.state.rules),
             isValid = _checkValidity.isValid,
             msgError = _checkValidity.msgError;
+        // console.log(value, isValid, msgError)
 
-        console.log(value, isValid, msgError);
+
         _this.setState({
           value: value,
           touched: true,
@@ -752,7 +753,7 @@ var RkMultiSelectAdd = function (_Component) {
       localOptions: [],
       _localProps: {}
     }, _this.handlerTouched = function () {
-      console.log('resetTouched TAGS INPUT');
+      // console.log('resetTouched TAGS INPUT')
       if (_this.state.touched) {
         _this.setState({ touched: false, valid: undefined });
       } else {
@@ -761,8 +762,9 @@ var RkMultiSelectAdd = function (_Component) {
         var _checkValidity = checkValidity(value, _this.state.rules),
             isValid = _checkValidity.isValid,
             msgError = _checkValidity.msgError;
+        // console.log(value, isValid, msgError)
 
-        console.log(value, isValid, msgError);
+
         _this.setState({
           value: value,
           touched: true,
@@ -1107,8 +1109,9 @@ var RkMultiSelectTag = function (_Component) {
         var _checkValidity = checkValidity(value, _this.state.rules),
             isValid = _checkValidity.isValid,
             msgError = _checkValidity.msgError;
+        // console.log(value, isValid, msgError)
 
-        console.log(value, isValid, msgError);
+
         _this.setState({
           value: value,
           touched: true,
@@ -1457,13 +1460,14 @@ var RkDatetime = function (_Component) {
         _this.setState({ touched: false, valid: undefined });
       } else {
         var value = _this.state.value;
-        console.log(value);
+        // console.log(value)
 
         var _checkValidity = checkValidity(value, _this.state.rules),
             isValid = _checkValidity.isValid,
             msgError = _checkValidity.msgError;
+        // console.log(isValid, msgError)
 
-        console.log(isValid, msgError);
+
         _this.setState({
           touched: true,
           valid: isValid,
@@ -1570,7 +1574,7 @@ var RkDatetime = function (_Component) {
             }
           }
         }
-        console.log(_value, _outValue);
+        // console.log(_value, _outValue)
         return [_value, _outValue];
       }
       return [null, null];
@@ -2608,7 +2612,7 @@ var RkForm = function (_Component) {
           });
           fInput = FormInputs[key];
         }
-        return React__default.createElement(RkFormInput, { key: key, disabled: _this3.props.isLoading, tooltip: _this3.state.tooltip, fields: fInput, render: render, changed: _this3.inputChanged, inputFunctions: _this3.inputFunctions });
+        return React__default.createElement(RkFormInput, { key: key, tooltip: _this3.state.tooltip, fields: fInput, render: render, changed: _this3.inputChanged, inputFunctions: _this3.inputFunctions });
       });
 
       return React__default.createElement(
@@ -2632,13 +2636,13 @@ RkForm.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
   inputFormHandler: PropTypes.func,
   inputChanged: PropTypes.func,
-  render: PropTypes.bool,
-  isLoading: PropTypes.bool
+  render: PropTypes.bool
+  // isLoading: PropTypes.bool
 };
 
 
 RkForm.defaultProps = {
-  isLoading: false,
+  // isLoading: false,
   render: false
 };
 

@@ -71,7 +71,7 @@ class RkMultiSelectTag extends Component {
     } else {
       const value = this.state.value
       const {isValid, msgError} = checkValidity(value, this.state.rules)
-      console.log(value, isValid, msgError)
+      // console.log(value, isValid, msgError)
       this.setState({
         value: value,
         touched: true,

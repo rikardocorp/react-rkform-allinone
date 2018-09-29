@@ -97,8 +97,8 @@ class RkInput extends Component {
     return isValid
   }
   handlerChangeValue = (newValue) => {
-    console.log('handlerChangeValue')
-    console.log(newValue)
+    // console.log('handlerChangeValue')
+    // console.log(newValue)
     const name = this.props.inputProps.name
     const value = newValue
     const {isValid, msgError} = checkValidity(value, this.state.rules)
